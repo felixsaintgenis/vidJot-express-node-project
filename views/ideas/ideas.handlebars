@@ -1,0 +1,15 @@
+  <h3>Video Idea</h3>
+
+{{#each ideas}}
+<div class="card card-body mb-2">
+<h3>{{title}}</h3>
+<p>{{details}}</p>
+<a href="/ideas/edit/{{id}}">Edit</a>
+<form class="" action="/ideas/delete/{{id}}" method="post">
+<input type="submit" class="btn-danger" name="" value="delete">
+</form>
+</div>
+
+{{else}}
+  <p>no video in the database</p>
+{{/each}}
